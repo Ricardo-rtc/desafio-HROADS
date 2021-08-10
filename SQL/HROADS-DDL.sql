@@ -22,14 +22,15 @@ CREATE TABLE Personagem(
 	nome VARCHAR(50),
 	capMana TINYINT,
 	capVida TINYINT,
-	dataAtt DATETIME,
-	dataCriacao DATETIME
+	dataAtt DATE,
+	dataCriacao DATE
 );
 GO
 
 CREATE TABLE Habilidade(
 	idHabilidade INT PRIMARY KEY IDENTITY,
 	idTipoHabilidade INT FOREIGN KEY REFERENCES Tipo_Habilidade(idTipoHabilidade),
+	nomeHabilidade VARCHAR(100)
 );
 GO
 
